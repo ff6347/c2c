@@ -16,8 +16,8 @@ It shows basic computer 2 computer communication.
 ##prerequisites  
 Set up your Arduino with a LDR (light dependend resistor) and the LED like this.  
 
-- One leg goes to the 5V pin 
-- one leg to the analog 0 pin
+- One LDR leg goes to the 5V pin 
+- one LDR leg to the analog 0 pin
 - connect the resistor to the analog 0 pin as well
 - connect the other leg of the resitor to the GND pin
 - connect the long leg of the LED to the 13 digital pin
@@ -26,12 +26,12 @@ Set up your Arduino with a LDR (light dependend resistor) and the LED like this.
 ![fritzing-layout](fritzing/fritzing-layout.png)  
 
 ##Port Detection  
-Connect your Arduino Board to your computer adn use the sketck [processing/list_serial_ports.pde](processing/list_serial_ports.pde) to see which port number is the one you chose in the Arduino IDE.  
+Connect your Arduino Board to your computer adn use the sketck [processing/list_serial_ports.pde](/processing/list_serial_ports.pde) to see which port number is the one you chose in the Arduino IDE.  
 
 ##Processing 2 Arduino  
 
 1. Check your ports
-2. Upload sketch [arduino/c2c_incoming.ino](arduino/c2c_incoming.ino) to your board  
+2. Upload sketch [arduino/c2c_incoming.ino](/arduino/c2c_incoming.ino) to your board  
 3. open and run the processing sketch [processing/write_to_serial.pde](processing/write_to_serial.pde)  
 4. by pressing UP and DOWN on your keyboard you can turn on a LED connected to pin 13  
 
