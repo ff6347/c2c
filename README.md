@@ -1,61 +1,96 @@
 c2c
 ===
 
-This sketches are part of the course ["Eingabe, Ausgabe. Grundlagen der prozessorientierten Gestaltung"](https://incom.org/workspace/4693) by Monika Hoinkis & Fabian Morón Zirfas
+A collection of sketches for teaching computer to computer communication @FH-Potsdam.
+These sketches are also part of the course ["Eingabe, Ausgabe. Grundlagen der prozessorientierten Gestaltung"](https://incom.org/workspace/4693) by Monika Hoinkis & Fabian Morón Zirfas
 
-It shows basic computer 2 computer communication.  
 
-##Komponents  
+##Needed Komponents  
 
-- Arduino IDE
-- Processing IDE
-- Light Dependend Resistor
-- 10k Ohm Resistor
-- LED
+- Computer  
+- Arduino (Uno)  
+- Arduino IDE  
+- Processing IDE  
+- Light Dependend Resistor  
+- LED  
+- RGB LED  
+- 10k Ohm Resistor  
+- 3 * 220 Ohm Resistor  
+- Breadboard  
+- Some wires  
 
-##prerequisites  
+###00 Serial Ports And Fritzing  
+####prerequisites  
 Set up your Arduino with a LDR (light dependend resistor) and the LED like this.  
+![fritzing-layout](00_Serial-Ports-And-Fritzing/fritzing/fritzing-layout.png)  
 
 - One LDR leg goes to the 5V pin 
 - one LDR leg to the analog 0 pin
-- connect the resistor to the analog 0 pin as well
+- connect the 10k Ohm resistor to the analog 0 pin as well
 - connect the other leg of the resitor to the GND pin
 - connect the long leg of the LED to the 13 digital pin
 - connect the short leg to the GND pin
 
-![fritzing-layout](fritzing/fritzing-layout.png)  
 
-##Port Detection  
-Connect your Arduino Board to your computer adn use the sketck [processing/list_serial_ports.pde](/processing/list_serial_ports.pde) to see which port number is the one you chose in the Arduino IDE.  
+####Port Detection  
+Connect your Arduino Board to your computer adn use the sketck [00_Serial-Ports-And-Fritzing/list_serial_ports/list_serial_ports.pde](00_Serial-Ports-And-Fritzing/list_serial_ports/list_serial_ports.pde) to see which port number is the one you choose in the Arduino IDE.  
+**Yo need to modify all the .pde sketches to select the right serial port**  
 
-##Processing 2 Arduino  
+###01 Arduino 2 Processing  
 
-1. Check your ports
-2. Upload sketch [arduino/c2c_incoming.ino](/arduino/c2c_incoming.ino) to your board  
-3. open and run the processing sketch [processing/write_to_serial.pde](processing/write_to_serial.pde)  
-4. by pressing UP and DOWN on your keyboard you can turn on a LED connected to pin 13  
+- Open and run the Processing sketch: 01_Arduino-2-Processing/pde/pde.pde  
+- Open and upload the Arduino sketch: 01_Arduino-2-Processing/ino/ino.ino   
 
+by waving your hand over the LDR you should be able to change the background color of the processing sketch.  
 
-##Arduino to Processing  
+###02 Processing 2 Arduino
 
-1. Check your ports
-2. Upload sketch [arduino/c2c_outgoing.ino](arduino/c2c_outgoing.ino) to your board  
-3. open and run the processing sketch [processing/read_from_serial.pde](processing/read_from_serial.pde)  
-4. by waving your hand over the LDR you should be able to change the background color of the processing sketch.
+- Open and run the Processing sketch: 02_Processing-2-Arduino/pde/pde.pde  
+- Open and upload the Arduino sketch: 02_Processing-2-Arduino/ino/ino.ino   
 
-##Poor Mans Oscilloscope  
+pressing UP and DOWN on your keyboard you can turn on a LED connected to pin 13  
 
-written by @chrismeyersfsu with edits from @positron96  
+###03 Poor Mans Oscilloscope
 
-1. check your ports
-2. Upload sketch [arduino/poor_mans_oscilloscope.ino](arduino/poor_mans_oscilloscope.ino) to your board  
-3. open and run the processing sketch [processing/poor_mans_oscilloscope.pde](processing/poor_mans_oscilloscope.pde)  
+- Open and run the Processing sketch: 03_Poor-Mans-Oscilloscope/pde/pde.pde  
+- Open and upload the Arduino sketch: 03_Poor-Mans-Oscilloscope/ino/ino.ino   
+
+![poor mans oscilloscope](03_Poor-Mans-Oscilloscope/poor-mans-oscilloscope.png)  
+
+By waving your hand over the LDR you should be able to change the line.
+The sketches written by [@chrismeyersfsu](https://gist.github.com/chrismeyersfsu/3270358) with edits from [@positron96](https://gist.github.com/positron96/7269466).  
+
+###04 Round Trip
+
+- Open and run the Processing sketch: 04_Round-Trip/pde/pde.pde  
+- Open and upload the Arduino sketch: 04_Round-Trip/ino/ino.ino  
+
+![serial-monitor](04_Round-Trip/serial-monitor.gif)  
+
+watch what happens in the serial monitor and the processing console. Messages are passed around...
+
+###05 Processing 2 Arduino Motion Detection
+
+- Open and run the Processing sketch: 05_Processing-2-Arduino-Motion-Detection/pde/pde.pde  
+- Open and upload the Arduino sketch: 05_Processing-2-Arduino-Motion-Detection/ino/ino.ino  
+
+by using the build in cam of our laptop or an webcam you can blink an LED by just moving infront of the camera.  
+
+###06 Processing 2 Arduino Multiple Values
+
+- Make a new arduino setup like this image  
+
+![fritzing-layout](06_Processing-2-Arduino-Multiple-Values/fritzing/fritzing-layout.png)  
+
+- Open and run the Processing sketch: 06_Processing-2-Arduino-Multiple-Values/pde/pde.pde  
+- Open and upload the Arduino sketch: 06_Processing-2-Arduino-Multiple-Values/ino/ino.ino  
+
+You can set the color of the RGB-LED from Processing.
 
 
 ##License  
-except Poor mans ocilloscope sketches
-
-Copyright (c)  2013 FH-Potsdam & Fabian "fabiantheblind" Morón Zirfas  
+if not further noticed  
+Copyright (c)  2013 - 2014 FH-Potsdam & Fabian "fabiantheblind" Morón Zirfas  
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software  without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to  permit persons to whom the Software is furnished to do so, subject to the following conditions:  
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A  PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
