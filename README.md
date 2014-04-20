@@ -1,8 +1,8 @@
 c2c
 ===
 
-A collection of sketches for teaching computer to computer communication @FH-Potsdam.
-These sketches are also part of the course ["Eingabe, Ausgabe. Grundlagen der prozessorientierten Gestaltung"](https://incom.org/workspace/4693) by Monika Hoinkis & Fabian Morón Zirfas
+A collection of sketches for teaching computer to computer communication [@FH-Potsdam](https://github.com/FH-Potsdam).
+These sketches are also part of the course series "Eingabe, Ausgabe. Grundlagen der prozessorientierten Gestaltung" by Monika Hoinkis & Fabian Morón Zirfas [@FH-Potsdam](https://github.com/FH-Potsdam)
 
 
 ##Needed Komponents  
