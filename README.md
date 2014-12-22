@@ -2,7 +2,8 @@ c2c
 ===
 
 A collection of sketches for teaching computer to computer communication [@FH-Potsdam](https://github.com/FH-Potsdam).
-These sketches are also part of the course series "Eingabe, Ausgabe. Grundlagen der prozessorientierten Gestaltung" by Monika Hoinkis & Fabian Morón Zirfas [@FH-Potsdam](https://github.com/FH-Potsdam)
+These sketches are part of the course ["Input Output (Eingabe Ausgabe)Fundamentals of process-oriented design."](https://interface.fh-potsdam.de/eingabe-ausgabe/)  
+
 
 
 ##Needed Komponents  
