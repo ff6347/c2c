@@ -16,7 +16,7 @@ import processing.serial.*; // import the lib
  */
 float maximum = 0; // set it as low as possible
 float minimum = 1023; // set it as high as possible
-
+float mappedval = 0;
 Serial port;     // Create object from Serial class
 String sensorvalue; // Data received from the serial port
 
@@ -34,8 +34,8 @@ void setup() {
 }
 
 void draw() {
-// these aren't the droids you are looking for
-// everything happens in serialEvent
+background(mappedval);
+
 }
 
 /**
@@ -55,7 +55,7 @@ void serialEvent (Serial myPort) {
     if(value < minimum){ minimum = value; }
 
     // now map the value into our range
-    float mappedval =  map(value,minimum,maximum,0,255);
+    mappedval =  map(value,minimum,maximum,0,255);
     // just some output to see whats going on
     println("value: " + value);
     println("maximum: " + maximum);
@@ -63,6 +63,5 @@ void serialEvent (Serial myPort) {
     println("mappedval: " + mappedval);
 
     // finally set the background color
-    background(mappedval);
    }
  }
