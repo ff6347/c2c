@@ -40,8 +40,8 @@ void sendMessage(char tag, int r, int g, int b, int s){
   myPort.write(r & 0xff);  //LSB
   myPort.write((char)(g / 256)); // MSB
   myPort.write(g & 0xff);  //LSB
-    myPort.write((char)(b / 256)); // MSB
+  myPort.write((char)(b / 256)); // MSB
   myPort.write(b & 0xff);  //LSB
-      myPort.write((char)(s / 256)); // MSB
+  myPort.write((char)(s / 256)); // MSB
   myPort.write(s & 0xff);  //LSB
 }
