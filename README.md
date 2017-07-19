@@ -2,11 +2,14 @@ c2c
 ===
 
 A collection of sketches for teaching computer to computer communication [@FH-Potsdam](https://github.com/FH-Potsdam).
-These sketches are part of the course ["Input Output (Eingabe Ausgabe)Fundamentals of process-oriented design."](https://interface.fh-potsdam.de/eingabe-ausgabe/)  
+These sketches are part of the seminars taking place in the Interface Lab.  
 
 
 
-##Needed Komponents  
+
+## Arduino And Processing  
+
+### Needed Komponents  
 
 - Computer  
 - Arduino (Uno)  
@@ -20,8 +23,8 @@ These sketches are part of the course ["Input Output (Eingabe Ausgabe)Fundamenta
 - Breadboard  
 - Some wires  
 
-###00 Serial Ports And Fritzing  
-####prerequisites  
+#### 00 Serial Ports And Fritzing  
+##### prerequisites  
 Set up your Arduino with a LDR (light dependend resistor) and the LED like this.  
 ![fritzing-layout](00_Serial-Ports-And-Fritzing/fritzing/fritzing-layout.png)  
 
@@ -33,25 +36,25 @@ Set up your Arduino with a LDR (light dependend resistor) and the LED like this.
 - connect the short leg to the GND pin
 
 
-####Port Detection  
+##### Port Detection  
 Connect your Arduino Board to your computer adn use the sketck [00_Serial-Ports-And-Fritzing/list_serial_ports/list_serial_ports.pde](00_Serial-Ports-And-Fritzing/list_serial_ports/list_serial_ports.pde) to see which port number is the one you choose in the Arduino IDE.  
 **Yo need to modify all the .pde sketches to select the right serial port**  
 
-###01 Arduino 2 Processing  
+#### 01 Arduino 2 Processing  
 
 - Open and run the Processing sketch: 01_Arduino-2-Processing/pde/pde.pde  
 - Open and upload the Arduino sketch: 01_Arduino-2-Processing/ino/ino.ino   
 
 by waving your hand over the LDR you should be able to change the background color of the processing sketch.  
 
-###02 Processing 2 Arduino
+#### 02 Processing 2 Arduino
 
 - Open and run the Processing sketch: 02_Processing-2-Arduino/pde/pde.pde  
 - Open and upload the Arduino sketch: 02_Processing-2-Arduino/ino/ino.ino   
 
 pressing UP and DOWN on your keyboard you can turn on a LED connected to pin 13  
 
-###03 Poor Mans Oscilloscope
+#### 03 Poor Mans Oscilloscope
 
 - Open and run the Processing sketch: 03_Poor-Mans-Oscilloscope/pde/pde.pde  
 - Open and upload the Arduino sketch: 03_Poor-Mans-Oscilloscope/ino/ino.ino   
@@ -61,7 +64,7 @@ pressing UP and DOWN on your keyboard you can turn on a LED connected to pin 13
 By waving your hand over the LDR you should be able to change the line.
 The sketches written by [@chrismeyersfsu](https://gist.github.com/chrismeyersfsu/3270358) with edits from [@positron96](https://gist.github.com/positron96/7269466).  
 
-###04 Round Trip
+#### 04 Round Trip
 
 - Open and run the Processing sketch: 04_Round-Trip/pde/pde.pde  
 - Open and upload the Arduino sketch: 04_Round-Trip/ino/ino.ino  
@@ -70,14 +73,14 @@ The sketches written by [@chrismeyersfsu](https://gist.github.com/chrismeyersfsu
 
 watch what happens in the serial monitor and the processing console. Messages are passed around...
 
-###05 Processing 2 Arduino Motion Detection
+#### 05 Processing 2 Arduino Motion Detection
 
 - Open and run the Processing sketch: 05_Processing-2-Arduino-Motion-Detection/pde/pde.pde  
 - Open and upload the Arduino sketch: 05_Processing-2-Arduino-Motion-Detection/ino/ino.ino  
 
 by using the build in cam of our laptop or an webcam you can blink an LED by just moving infront of the camera.  
 
-###06 Processing 2 Arduino Multiple Values
+#### 06 Processing 2 Arduino Multiple Values
 
 - Make a new arduino setup like this image  
 
@@ -89,7 +92,7 @@ by using the build in cam of our laptop or an webcam you can blink an LED by jus
 You can set the color of the RGB-LED from Processing.
 
 
-##License  
+### License  
 If not further noted 
 
 This is free and unencumbered software released into the public domain.  
@@ -103,7 +106,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For more information, please refer to <http://unlicense.org>  
 
 
-##Poor mans ocilloscope
+###Poor mans ocilloscope
 is under GNU General Public License  
 
 (c) 2008 Sofian Audry (info@sofianaudry.com)  
